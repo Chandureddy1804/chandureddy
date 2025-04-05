@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Chandrashekhar Reddy.D | Portfolio</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.1/css/all.css"/>
+ <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #121212, #1e1e2f);
+      color: #fff;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.light-mode {
+      background: #f0f0f0;
+      color: #000;
+       
+    }
+    body.light-mode header h1 {
+        color:#34d5eb;
+        text-shadow: 0 0 3px #0ef;
+    }
+    #toggleTheme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #0ef;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      z-index: 999;
+    }
+    #landing {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      font-size: 2.5rem;
+      color: #0ef;
+      animation: typing 2s steps(25), blink 0.5s step-end infinite alternate;
+      overflow: hidden;
+      white-space: nowrap;
+      /* border-right: 4px solid #0ef; */
+      width: 0;
+      margin: auto;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    #portfolio {
+      display: none;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      color: #0ef;
+      text-shadow: 0 0 3px #0ef;
+    }
+    section {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    body.light-mode section {
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+    }
+    h2 {
+      color: #0ef;
+      margin-bottom: 10px;
+      transition: transform 0.3s;
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    h2:hover {
+      transform: scale(1.05);
+    }
+    ul {
+      list-style: none;
+      padding-left: 1em;
+    }
+    li {
+      margin: 8px 0;
+      transition: transform 0.3s, color 0.3s;
+      position: relative;
+      padding-left: 20px;
+    }
+    li::before {
+      content: "\2713";
+      position: absolute;
+      left: 0;
+      color: #0ef;
+    }
+    li:hover {
+      transform: translateX(5px);
+      color: #0ef;
+    }
+    .resume-btn {
+      display: inline-block;
+      margin: 40px auto 0;
+      padding: 12px 30px;
+      background: #0ef;
+      color: #000;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: background 0.3s;
+    }
+    .resume-btn:hover {
+      background: #08d;
+    }
+    .social-icons {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #0ef;
+      font-size: 1.8rem;
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    .social-icons a:hover {
+      transform: scale(1.3);
+      color: #08d;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #0ef;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+      transition: background 0.3s;
+    }
+    .back-to-top:hover {
+      background: #08d;
+    }
+    .icon-title i {
+      color: #0ef;
+    }
+  </style>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+    }
+
+    setTimeout(() => {
+      document.getElementById("landing").style.display = "none";
+      document.getElementById("portfolio").style.display = "block";
+    }, 3000);
+
+    window.addEventListener('scroll', () => {
+      const btn = document.querySelector('.back-to-top');
+      if (window.scrollY > 200) {
+        btn.style.display = 'block';
+      } else {
+        btn.style.display = 'none';
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</head>
+<body>
+  <div id="toggleTheme" onclick="toggleTheme()">Toggle Theme</div>
+  <div id="landing">Hi, I'm <strong style="color:#fff;">Chandrashekhar Reddy.D</strong> — SOC Analyst</div>
+
+  <div id="portfolio">
+  <header>
+    <h1>Chandrashekhar Reddy. D</h1>
+    <p>SOC Analyst | Cybersecurity Analysis | Hyderabad, Telangana</p>
+  </header>
+
+  <section id="about">
+    <h2><i class="fas fa-user"></i>About Me</h2>
+    <p>Hello! I’m a passionate and detail-oriented SOC Analyst with 1.8 years of hands-on experience in threat detection, incident response, and SIEM tools like Splunk and QRadar. I’m committed to cybersecurity excellence and love to continuously upgrade my skills.</p>
+  </section>
+
+  <section id="education">
+    <h2><i class="fa-solid fa-user-graduate"></i> Education</h2>
+    <ul>
+      <li><strong>B.Tech in Mechanical Engineering</strong> — Swami Vivekananda Institute of Technology, JNTUH (6.14)</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2><i class="fas fa-briefcase"></i>Experience</h2>
+    <ul>
+      <li><strong>SOC Analyst</strong> at Santrotech Software Technologies Pvt Ltd — 1.8 years</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2><i class="fas fa-lightbulb"></i>Skills</h2>
+    <ul>
+      <li>SIEM Tools (Splunk, QRadar)</li>
+      <li>Threat Detection & Response</li>
+      <li>Security Log Analysis</li>
+      <li>Incident Management</li>
+      <li>Network Monitoring</li>
+      <li>Firewall & IDS/IPS</li>
+      <li>Vulnerability Assessment</li>
+      <li>Windows/Linux Security</li>
+    </ul>
+  </section>
+  <section id="courses">
+    <h2 class="icon-title"><i class="fas fa-laptop-code"></i>Courses</h2>
+    <ul>
+      <li>QRadar SIEM Foundation</li>
+      <li>EHE</li>
+      <li>CORP Security</li>
+      <li>OWASP Top 10</li>
+      <li>Cybersecurity Essentials (LFC108)</li>
+    </ul>
+  </section>
+
+  <section id="certifications">
+    <h2><i class="fas fa-file-alt"></i>Certifications</h2>
+    <ul>
+      <li>Splunk Core Certified User</li>
+      <li>Google Cybersecurity Certificate</li>
+      <li>CompTIA CYSA+</li>
+      <li>CEH</li>
+      <li>CCNA</li>
+      <li>Microsoft Excel</li>
+    </ul>
+  </section>
+
+  
+
+  <section id="languages">
+    <h2><i class="fas fa-language"></i>Languages</h2>
+    <ul>
+      <li>English</li>
+      <li>Telugu</li>
+      <li>Hindi</li>
+    </ul>
+  </section>
+
+  <div class="social-icons">
+    <a href="mailto:chandrashekharreddy935@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="tel:+917095297048" title="Call"><i class="fas fa-phone"></i></a>
+    <a href="https://www.linkedin.com/in/chandrashekhar-reddy-dhushetty-a7490b354?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </div>
+
+  <a href="./cyber_security_resume F.pdf" class="resume-btn" target="_blank">View Resume</a>
+</div>
+
+  <div class="back-to-top" onclick="scrollToTop()">↑</div>
+</body>
+</html>
